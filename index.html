@@ -36,8 +36,7 @@
                 <tbody id="tbl-data">
                     <!-- OUTPUT DATA HERE-->   
                      
-                </tbody>                  
-            
+                </tbody>                 
     
         <script>
             document.getElementById("button").addEventListener("click", isJan1stOnSunday);    
@@ -57,9 +56,7 @@
     
                 for(let i=start; i<=stop; i++){
                     d.setFullYear(i);
-                    if(d.getDay() === 0){
-
-                       
+                    if(d.getDay() === 0){                       
 
                         // Insert a row at the end of the table
                         let row = elem.insertRow(-1);
@@ -71,9 +68,7 @@
                         let newText = document.createTextNode(i);
                         newCell.appendChild(newText);
     
-                        //document.write("<tr><td>" + i + "</td></tr>");
-
-                    }
+                   }
                 }   
             }  
                  
