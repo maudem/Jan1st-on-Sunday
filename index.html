@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Is January 1st on a Sunday?</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>   
+
+        <div id="top-div">
+            <p>In what year is January 1st on a Sunday?</p> 
+        
+
+        <label for="start">Start Year</label>
+        <input type="number" id="start" placeholder="minimum start 1900" min="1900" max="">
+
+        <label for="stop">Stop Year</label>
+        <input type="number" id="stop" placeholder="minimum start 1900" min="1900" max="">
+
+    </div>   
+        <br><br><br>
+
+
+    
+        <div id="button"><button>CLICK TO FIND OUT</button></div>
+
+        <table id="tbl-header">
+               <thead>
+                   <tr>
+                        <td>DATE</td>
+                    </tr>  
+                </thead>
+    
+                <tbody id="tbl-data">
+                    <!-- OUTPUT DATA HERE-->   
+                     
+                </tbody>                  
+            
+    
+        <script>
+            document.getElementById("button").addEventListener("click", isJan1stOnSunday);    
+    
+            function isJan1stOnSunday(){ 
+
+                // Get a reference to the table
+                let elem = document.getElementById('tbl-data')
+                elem.innerHTML = "";
+                
+                var d = new Date();
+                d.setMonth(0);
+                d.setDate(1);
+
+                let start = document.getElementById('start').value;
+                let stop  = document.getElementById('stop').value;
+    
+                for(let i=start; i<=stop; i++){
+                    d.setFullYear(i);
+                    if(d.getDay() === 0){
+
+                       
+
+                        // Insert a row at the end of the table
+                        let row = elem.insertRow(-1);
+
+                        // Insert a cell in the row at index 0
+                        let newCell = row.insertCell(0);
+
+                        // Append a text node to the cell
+                        let newText = document.createTextNode(i);
+                        newCell.appendChild(newText);
+    
+                        //document.write("<tr><td>" + i + "</td></tr>");
+
+                    }
+                }   
+            }  
+                 
+        </script>
+
+</body>
+</html>
