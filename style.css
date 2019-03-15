@@ -1,0 +1,51 @@
+body {
+    /* oldlace */
+    background-color: #FDF5E6; 
+    width: 900px; 
+    margin: 0 auto;    
+    border: 0px solid red;
+}
+
+#top-div {
+    text-align: center;
+    height: 100px;
+    margin-top: 10px;
+    padding-top: 35px;
+    font-size: 25px;
+}
+
+label {
+    font-size: 15px;
+}
+
+#button {
+    text-align: center;
+    height: 100px;
+    margin-top: 10px;
+    
+}
+
+table, th, td {
+        border: 1px solid black;
+        text-align: center;
+}
+
+table {
+    border-collapse: collapse;
+    width: 40%;
+    margin: 0 auto;
+}
+
+th {
+    height: 50;
+    background-color: #4CAF50;
+    font-size: 25px;
+}
+
+td {
+    height: 50px;
+}
+
+tr:hover {
+    background-color: #e21919;
+}
